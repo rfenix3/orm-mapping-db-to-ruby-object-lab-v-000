@@ -29,6 +29,22 @@ class Student
     end.first
   end
   
+  def count_all_students_in_grade_9
+  end
+    it 'returns an array of all students in grades 9' do
+        pat.name = "Pat"
+        pat.grade = 12
+        pat.save
+        sam.name = "Sam"
+        sam.grade = 9
+        sam.save
+
+        all_in_9 = Student.count_all_students_in_grade_9
+        expect(all_in_9.size).to eq(1)
+      end
+  
+  
+  
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade) 
