@@ -10,7 +10,7 @@ class Student
     # remember each row should be a new instance of the Student class
 
     sql = "SELECT * FROM students"
-    DB[:conn].execute(sql).map {|row|
+    DB[:conn].execute(sql).map do|row|
       self.new_from_db(row)}
 
   end
