@@ -52,7 +52,7 @@ class Student
 
   def self.first_students_in_grade_10
     sql = "SELECT * from students where grade = 10 and id = 1"
-    DB[:conn].execute(sql, x).map do |row|
+    DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
     end    
   end
