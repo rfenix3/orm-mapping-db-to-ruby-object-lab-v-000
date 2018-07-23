@@ -54,7 +54,7 @@ class Student
     sql = "SELECT * from students where grade = 10 ORDER by id"
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
-    end
+    end.first
   end
 
   
