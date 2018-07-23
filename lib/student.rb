@@ -24,7 +24,9 @@ class Student
     # find the student in the database given a name
     # return a new instance of the Student class
     sql = "SELECT * from students where name = ?"
-    DB[:conn].execute(sql, name).map
+    DB[:conn].execute(sql, name).map do |row|
+      
+    end
   end
   
   def save
