@@ -11,7 +11,7 @@ class Student
 
     sql = "SELECT * FROM students"
     DB[:conn].execute(sql).map {|row|
-      
+      self.
 
   end
 
