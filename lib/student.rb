@@ -11,8 +11,7 @@ class Student
 
     sql = "SELECT * FROM students"
     DB[:conn].execute(sql).map {|row|
-      self.new_from_db
-    end
+      self.new_from_db(row)
 
   end
 
